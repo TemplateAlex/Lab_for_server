@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+body {
+	margin: 0;
+}
+
+.progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 0%;
+	background-color: #142F23;
+	z-index: 1;
+	box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.8); 
+}
+
+.main__menu {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main__background {
+	position: absolute;
+	z-index: -1;
+	width: 110%;
+	height: 110%;
+	left: -10%;
+	background: url('images/forest.jpg') center center / cover;
+}
+
+.main__content {
+	z-index: 1;
+	max-width: 1000px;
+	margin-left: 30%;
+	transform: translate(-20%);
+}
+
+.li__content {
+	font-size: 10px;
+}
+
+.main__content p {
+	font-family: 'Balsamiq Sans', cursive;
+	color: #F0F8FF;
+	font-size: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 15px;
+}
+
+.main__content h1, h2 {
+	font-family: 'Comforter', cursive;
+	color: #F5F5DC;
+}
+
+.main__content ul {
+	list-style-type: none;
+	list-style-image: url('images/icon_for_ul.png');
+	margin-left:10%;
+	margin-right: 10%;
+}
+
+.overlay {
+	position: fixed;
+	z-index: 2;
+	height: 100%;
+	width: 0;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .overlay-btn__close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  width: 48px;
+  height: 48px;
+  background-image: url('images/exit_btn.png');
+}
+
+
+.overlay-btn__background {
+	position: fixed;
+	left: 0.5%;
+	width: 50px;
+	height: 50px;
+	justify-content: center;
+	z-index: 1;
+	background-color: black;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.overlay-btn__image {
+	width: 48px;
+	height: 48px;
+	background-image: url('images/menu_icon.png');
+}
+
+.overlay-btn__image:hover {
+	animation: iconRotation 1s;
+}
+
+@keyframes iconRotation {
+	50% {transform: rotateX(45deg);}
+	100% {transform: rotateX(360deg);}
+}
